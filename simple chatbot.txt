@@ -1,0 +1,18 @@
+def simple_chatbot(user_input):
+    if "hello" in user_input.lower():
+        return "Hello! How can I assist you today?"
+    elif "how are you" in user_input.lower():
+        return "I'm just a chatbot, but thanks for asking!"
+    elif "weather" in user_input.lower():
+        return "I'm sorry, I'm just a simple chatbot and I can't check the weather."
+    else:
+        return "I'm sorry, I don't understand. Can you please rephrase or ask something else?"
+
+
+while True:
+    user_input = input("You: ")
+    if user_input.lower() == 'exit':
+        print("Chatbot: Goodbye!")
+        break
+    response = simple_chatbot(user_input)
+    print("Chatbot:", response)
